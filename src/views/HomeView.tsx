@@ -2,22 +2,40 @@ import "../app/globals.css";
 import Image from "next/image";
 export const HomeView: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-300 flex flex-col items-center justify-center gap-4">
-      <div className="flex flex-col text-center items-center justify-center bg-white p-[16px] pb-[40px] rounded-[20px] max-w-[320px]">
+    <div className="min-h-screen bg-yellow flex flex-col items-center justify-center gap-4">
+      <div className="card">
         <Image
-          src="/image-qr-code.png"
-          alt="QR Code"
-          width={288}
-          height={288}
+          src="/images/illustration-article.svg"
+          alt="Article"
+          width={522}
+          height={522}
           className="rounded-[10px]"
         />
-        <p className="text-preset-1 text-slate-900 pt-[24px] pb-[16px]">
-          Improve your front-end skills by building projects
-        </p>
-        <p className="text-preset-2 text-slate-500">
-          Scan the QR code to visit Frontend Mentor and take your coding skills
-          to the next level
-        </p>
+        <div className="card-content">
+          <div className="card-tag">
+            <button className="card-tag-button">
+              <p>Learning</p>
+            </button>
+          </div>
+          <div className="card-date">
+            <p>Published 21 Dec 2023</p>
+          </div>
+          <p className="card-title">HTML & CSS foundations</p>
+          <p className="card-description">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
+        <div className="card-author">
+          <Image
+            src="/images/image-avatar.webp"
+            alt="Author"
+            width={24}
+            height={24}
+            className="author-avatar"
+          />
+          <p className="author-name">Greg Hooper</p>
+        </div>
       </div>
     </div>
   );
